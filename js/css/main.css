@@ -1,0 +1,270 @@
+:root {
+	--titlePad: 0.25in;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+
+* {
+	color:white;
+	font-family: Arial, Helvetica, sans-serif;
+	margin:0;
+
+	position: relative;
+}
+
+body {
+	background-color: black;
+	overflow: hidden;
+}
+
+#titleBar {
+	text-align: center;
+	background-color: black;
+
+	position:absolute;
+
+	top:0;
+	left:0;
+	width:100%;
+
+	padding-top:var(--titlePad);
+	padding-bottom:var(--titlePad);
+}
+#titleBar .title {
+	font-size: calc(var(--titlePad) * 2);
+}
+
+/* Image 1 */
+#body #img1Spacer {
+	width:100%;
+}
+#body #img1Spacer img {
+	width:100%;
+}
+#body #img1 {
+	position:fixed;
+	width:100%;
+
+	left:0;
+	top:0;
+}
+#body #img1 img {
+	width:100%;
+
+	filter:brightness(50%) contrast(200%);
+}
+#body #img1 a.tint {
+	position: absolute;
+	left:50%;
+	top:50%;
+	width:100%;
+	height: 100%;
+	transform: translate(-50%,-50%);
+
+	background-color: #0088;
+}
+#body #img1 a.text {
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+
+	font-size: 1in;
+}
+
+@keyframes popImg {
+	0% {
+		transform: translate(-50%,200%);
+	}
+	100 {
+		transform: translate(-50%,0%);
+	}
+}
+@keyframes popText {
+	0% {
+		top:200%;
+	}
+	100% {
+		top:50%;
+	}
+}
+#body #p1 {
+	background-color: black;
+	width: 100%;
+
+	padding: 1in;
+
+	overflow: hidden;
+}
+#body #p1 .text {
+	max-width: 40%;
+	
+	position:absolute;
+
+	top:200%;
+	left:30%;
+	transform: translate(-50%,-50%);
+
+	font-size: 20px;
+}
+#body #p1 img {
+	position:relative;
+
+	left:75%;
+	transform: translate(-50%,200%);
+
+	transition: filter 0.5s;
+}
+#body #p1 img:hover {
+	filter:brightness(1.2);
+}
+
+/* Annoying Popup */
+/* main */
+#annoyingPopup {
+	position:fixed;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+
+	width:100%;
+	height:100%;
+
+	background-color: #0008;
+
+	user-select: none;
+}
+#annoyingPopup .main {
+	transform: translate(-50%,-50%);
+	position:fixed;
+
+	width:max-content;
+	height:max-content;
+
+	padding:1in;
+
+	left:50%;
+	top:50%;
+
+	background-color:white;
+	border: grey solid 3px;
+	border-radius: 10px;
+
+	text-align: center;
+}
+#annoyingPopup .main .caption1 {
+	font-size:25px;
+	color:black;
+}
+#annoyingPopup .main .title {
+	font-size:50px;
+	color:black;
+
+	margin-top: 50px;
+}
+#annoyingPopup .main .inpDiv {
+	margin-top:75px;
+}
+#annoyingPopup .main .inpDiv input.text {
+	height: 25px;
+	margin-top: 25px;
+
+	font-size: 25px;
+	text-align: center;
+	color:black;
+	border:solid black 2px;
+	border-radius: 5px;
+}
+#annoyingPopup .main .inpDiv input.text::placeholder {
+	color:#444;
+}
+#annoyingPopup .main .inpDiv a {
+	color:black;
+}
+#annoyingPopup .main .inpDiv input.check {
+	margin-top:20px;
+	margin-right:5px;
+	cursor: pointer;
+}
+#annoyingPopup .main .inpDiv a span.link {
+	color:cornflowerblue;
+	text-decoration: underline cornflowerblue solid;
+	cursor:pointer;
+}
+#annoyingPopup .main .inpDiv button {
+	margin-top:25px;
+	
+	font-size:30px;
+	color:black;
+
+	background-color:#aaa; /*#f44*/
+	border: solid black 1px;
+	border-radius: 5px;
+	cursor: not-allowed;
+}
+#annoyingPopup .main #close {
+	cursor:pointer;
+	position:fixed;
+	right:3%;
+	top:3%;
+}
+/* Signed Up */
+#annoyingPopup .signed {
+	transform: translate(-50%,-50%);
+	position:fixed;
+
+	width:max-content;
+	height:max-content;
+
+	padding:1in;
+
+	left:50%;
+	top:50%;
+
+	background-color:white;
+	border: grey solid 3px;
+	border-radius: 10px;
+
+	text-align: center;
+}
+#annoyingPopup .signed .title {
+	font-size:50px;
+	color:black;
+}
+/* Terms */
+#annoyingPopup .terms {
+	transform: translate(-50%,-50%);
+	position:fixed;
+
+	width:max-content;
+	height:max-content;
+
+	padding:1in;
+
+	left:50%;
+	top:50%;
+
+	background-color:white;
+	border: grey solid 3px;
+	border-radius: 10px;
+
+	text-align: center;
+}
+#annoyingPopup .terms .title {
+	font-size:50px;
+	color:black;
+}
+#annoyingPopup .terms .p {
+	font-size:20px;
+	color:black;
+	margin-top:50px;
+}
+#annoyingPopup .terms button {
+	margin-top: 30px;
+	
+	font-size: 15px;
+	color:black;
+
+	cursor: pointer;
+}

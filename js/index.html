@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML with Styling and Javascript</title>
+
+		<script src="./js/main.js"></script>
+		
+		<link rel="stylesheet" href="./css/main.css">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	</head>
+	<body>
+		<div id="body">
+			<div id="img1Spacer">
+				<img src="../images/cjh.jpg" ondragstart="return false;">
+			</div>
+			<div id="img1">
+				<img src="../images/cjh.jpg" ondragstart="return false;">
+				<a class="tint"></a>
+				<br>
+				<a class="text">ARNELL</a>
+			</div>
+
+			<div id="p1" data-visible="false">
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut eros blandit quam maximus pharetra congue a lectus. Donec sed diam vel tortor luctus porta vitae sit amet eros. Proin sapien odio, sagittis eget vestibulum id, scelerisque id diam. Mauris aliquam, magna in vehicula hendrerit, felis lectus lobortis lorem, non egestas metus leo quis nunc. Aliquam lobortis tortor dapibus pretium rutrum. Ut varius, lacus vulputate commodo viverra, erat urna pharetra ex, at gravida dolor sem in turpis. Praesent massa justo, facilisis vel lorem ac, fringilla facilisis tellus. Vestibulum vehicula dapibus dui eu efficitur.</p>
+				<img src="../images/arnell.jpg" alt="Arnell_Not_Found" ondragstart="return false;" id="arnellPic">
+			</div>
+		</div>
+		<div id="titleBar">
+			<a class="title">HTML with Styling and Javascript</a>
+		</div>
+		<div id="annoyingPopup">
+			<div class="main">
+				<p class="caption1">Annoying Popup Ad</p>
+				<p class="title">Subscribe to our Newsletter!</p>
+				<div class="inpDiv">
+					<input placeholder="EMAIL" type="email" class="text">
+					<br>
+					<input placeholder="PASSWORD" type="password" class="text">
+					<br>
+					<input type="checkbox" onchange="changeTerms()" class="check" id="termsCheck"><a>I agree to the <span class="link" onclick="terms()">Terms and Conditions</span></a>
+					<br>
+					<button onclick="signUp()">Sign Up</button>
+				</div>
+				<img id="close" src="../images/close.svg" ondragstart="return false;" onclick="document.getElementById('annoyingPopup').style.display = 'none';document.body.style.overflow = 'scroll';">
+			</div>
+			<div class="signed" hidden>
+				<p class="title">You are SIGNED UP!!!</p>
+			</div>
+			<div class="terms" hidden>
+				<p class="title">Terms and Conditions</p>
+				<p class="p">we can sell your information and use your identity for illegal stuff lol</p>
+				<button onclick="terms(true)">Back</button>
+			</div>
+		</div>
+	</body>
+</html>
